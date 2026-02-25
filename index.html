@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NIVIA TECH | Innovation Partner for the AI Era</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Animations and Fonts -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Separate CSS Link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">NIVIA <span>TECH</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#vision">Vision</a>
+    <a href="#tech">Technology</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- [Page 1] Hero Section -->
+<section class="hero">
+  <!-- NEW EYE-CATCHING AI IMAGE -->
+  <div class="slide active" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80')">
+    <div class="overlay">
+      <h1 data-aos="fade-up">Transform Your Business<br><span>for the AI Era</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Your digital presence is no longer an option—it’s a necessity. Fast. Secure. Serverless.</p>
+    </div>
+  </div>
+  <div class="slide" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80')">
+    <div class="overlay">
+      <h1 data-aos="fade-up">Engineering<br><span>Simplified</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">Taking complex, cutting-edge technology and making it work seamlessly for your business growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- [Page 2] The Vision Section -->
+<section class="vision-section" id="vision">
+  <div class="tech-container" style="flex-direction: column; text-align: center;">
+    <div class="tech-content" data-aos="fade-up">
+      <h2 class="section-title">AI is Ruling the World. <br><span>Are You Keeping Up?</span></h2>
+      <p class="tech-text" style="max-width: 900px; margin: 0 auto 30px;">In today’s market, if your business isn't visible on Google, it practically doesn't exist. At Redhill Softec, we bridge the gap between traditional business and modern technology. We provide high-performance digital assets designed to dominate search results and convert visitors into loyal customers.</p>
+      <div class="stat-item" style="border-top: 1px solid var(--glass-border); padding-top: 30px; display: inline-block;">
+        <h4 style="color: var(--accent); letter-spacing: 2px;">OUR CORE PHILOSOPHY</h4>
+        <p style="font-style: italic; font-size: 1.2rem; color: #fff;">"Engineering Simplified."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [Page 3] Technology & Advantages (Correctly Fitted Side-by-Side) -->
+<section class="overview-hero-wrapper" id="tech">
+  <div class="tech-container">
+    <!-- Left Side: Technological Excellence -->
+    <div class="tech-content" data-aos="fade-right">
+      <h2 class="section-title">Why Our Next-Gen <br><span>Design is Different</span></h2>
+      <p class="tech-text">We have moved away from slow, traditional hosting. Our websites leverage <strong>Serverless Technology</strong>, the gold standard for modern web development. Unlike traditional servers that crash, serverless architecture distributes your site across a global network for 100% reliability.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item"><span class="stat-number">99.9%</span><p>Uptime</p></div>
+        <div class="stat-item"><span class="stat-number">0</span><p>Server Crashes</p></div>
+        <div class="stat-item"><span class="stat-number">100%</span><p>Secure</p></div>
+      </div>
+    </div>
+
+    <!-- Right Side: Domain Excellence Interactive Box -->
+    <div class="inner-showcase" data-aos="fade-left">
+      <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 20px;">The Power of <span>Serverless</span></h2>
+      
+      <div class="domain-selectors">
+        <button class="domain-btn active" onclick="switchShowcase('speed', this)">Speed</button>
+        <button class="domain-btn" onclick="switchShowcase('security', this)">Security</button>
+        <button class="domain-btn" onclick="switchShowcase('eco', this)">Efficiency</button>
+      </div>
+
+      <div class="showcase-display" id="showcaseDisplay">
+        <div class="showcase-info">
+          <h3 id="showcaseTitle">Lightning Speed</h3>
+          <p id="showcaseDesc">Your site loads instantly from the nearest global node, ensuring no customer leaves due to slow loading times.</p>
+        </div>
+        <div class="showcase-visual">
+          <img id="showcaseImg" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Tech Visual">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [Page 4] Services & Pricing -->
+<section class="pricing" id="pricing">
+  <h2 class="section-title" data-aos="fade-up" style="text-align: center;">Comprehensive <span>Solutions</span></h2>
+  
+  <!-- Investment Table -->
+  <div class="contact-form-wrapper table-box" data-aos="fade-up">
+    <h3 style="color: var(--accent); margin-bottom: 20px; text-align: center;">Investment Tiers</h3>
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; color: #fff;">
+            <thead>
+                <tr style="border-bottom: 2px solid var(--accent);">
+                    <th style="padding: 15px;">Service</th>
+                    <th style="padding: 15px;">Investment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 15px;">Professional Web Design</td><td style="padding: 15px;">Starts from ₹5,000</td></tr>
+                <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 15px;">High-Speed Hosting</td><td style="padding: 15px;">₹499 / month</td></tr>
+                <tr><td style="padding: 15px;">Domain Registration</td><td style="padding: 15px;">₹99 to ₹1,500 <br><small>(Subject to availability)</small></td></tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card" data-aos="zoom-in"><span class="icon">📈</span><h3>Marketing</h3><p>Strategic campaigns designed to reach your audience.</p></div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="100"><span class="icon">🔍</span><h3>SEO</h3><p>Advanced Optimization to rank you higher on Google.</p></div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="200"><span class="icon">👥</span><h3>Social</h3><p>High-impact posts to build your brand community.</p></div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="300"><span class="icon">📍</span><h3>Google</h3><p>Optimization to ensure customers find your office first.</p></div>
+  </div>
+</section>
+
+<!-- [Page 5] Contact Us Section -->
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <div class="contact-info" data-aos="fade-right">
+      <h2 class="section-title">Claim Your Spot on <span>Google Page 1</span></h2>
+      <p style="color: var(--text-muted); margin-bottom: 40px;">Redhill Softec: Your Partner in Digital Excellence. Ready to claim your spot on the first page of Google?</p>
+      
+      <div class="contact-detail-card">📍 <div><h4>Location</h4><p>Vijayanagar, Bangalore - 560104</p></div></div>
+      <div class="contact-detail-card">📞 <div><h4>Phone & WhatsApp</h4><p>+91 94488 47874</p></div></div>
+      <div class="contact-detail-card">✉️ <div><h4>Email</h4><p>info@redhillsoftec.com</p></div></div>
+    </div>
+
+    <!-- Enquiry Form -->
+    <div class="contact-form-wrapper" data-aos="fade-left">
+      <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--accent);">Initialize Inquiry</h3>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="modern-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="4" placeholder="Business goals..." required></textarea>
+        <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
+        <button type="submit" class="btn-submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Map -->
+<div class="map-wrapper" data-aos="fade-up">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.107837004383!2d77.53534599999999!3d12.9649509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6c1c00845b%3A0x51ff162b7a35afdc!2sNIVIATECH!5e0!3m2!1sen!2sin!4v1771826480259!5m2!1sen!2sin" loading="lazy"></iframe>
+</div>
+
+<footer>
+  <div class="logo">REDHILL <span>SOFTEC</span></div>
+  <div class="footer-bottom">© 2026 REDHILL SOFTEC | ALL RIGHTS RESERVED.</div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
