@@ -479,3 +479,38 @@ footer {
   }
   .clients-section { padding: 50px 0; }
 }
+/* --- MOBILE MENU ANIMATION --- */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: flex; /* This makes the 3 bars appear on mobile */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-main);
+    transition: 0.3s;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%; /* This hides the menu off-screen to the right */
+    width: 75%;
+    height: 100vh;
+    background: #0a0a0a;
+    padding: 100px 40px;
+    transition: 0.5s ease; /* This creates the sliding effect */
+  }
+
+  /* When JS adds the 'active' class, the menu slides to 0 (visible) */
+  .navbar nav.active {
+    right: 0;
+  }
+}
