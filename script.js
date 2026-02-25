@@ -251,3 +251,22 @@ document.addEventListener('DOMContentLoaded', () => {
     handleNavigation();
     initMagneticMarquee(); // <--- Add this line
 });
+// --- MOBILE MENU LOGIC ---
+const menuToggle = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        // Toggle the 'active' class on both the button and the menu
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close the menu automatically when a user clicks a link
+document.querySelectorAll('.navbar nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
