@@ -381,3 +381,66 @@ footer {
 ::-webkit-scrollbar-track { background: var(--bg-deep); }
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; border: 2px solid var(--bg-deep); }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+/* --- CLIENT MARQUEE SECTION --- */
+.clients-section {
+  padding: 80px 0;
+  background: var(--bg-surface);
+  overflow: hidden;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 30px;
+  /* Creates a smooth fade effect on the left and right edges */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  gap: 30px;
+  min-width: 100%;
+  animation: scroll-marquee 45s linear infinite;
+}
+
+.marquee-content span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-main);
+  background: var(--card-bg);
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
+  white-space: nowrap;
+  transition: border-color 0.3s ease;
+}
+
+.marquee-content span:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pause scrolling when user hovers to read specific industries */
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .marquee-content span {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
