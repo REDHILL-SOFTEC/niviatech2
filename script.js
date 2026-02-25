@@ -140,10 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Domain Auto-cycle every 7 seconds
-    setInterval(() => {
+    // --- IMPROVED AUTO-CYCLE WITH PAUSE ---
+    let cycleInterval = setInterval(() => {
         currentDomainIndex = (currentDomainIndex + 1) % domains.length;
         window.switchShowcase(domains[currentDomainIndex]);
     }, 7000);
+
+    // Stop auto-cycle if the user is interacting with the showcase
+    const showcaseContainer = document.querySelector('.inner-showcase');
+    if(showcaseContainer) {
+        showcaseContainer.addEventListener('mouseenter', () => {
+            clearInterval(cycleInterval); // Stops the timer
+        });
+        
+        // Optional: Restart the timer when the mouse leaves
+        showcaseContainer.addEventListener('mouseleave', () => {
+            cycleInterval = setInterval(() => {
+                currentDomainIndex = (currentDomainIndex + 1) % domains.length;
+                window.switchShowcase(domains[currentDomainIndex]);
+            }, 7000);
+        });
+    }
 
     // --- 5. PRECISION NAVIGATION & ACTIVE HIGHLIGHTING ---
     const handleNavigation = () => {
@@ -205,9 +222,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     };
+    // --- 6. MAGNETIC MARQUEE EFFECT ---
+    // Makes industry tags "attracted" to the mouse for a premium interactive feel
+    const initMagneticMarquee = () => {
+        const marqueeSpans = document.querySelectorAll('.marquee-content span');
+        
+        marqueeSpans.forEach(span => {
+            span.addEventListener('mousemove', (e) => {
+                const rect = span.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                // Moves the span slightly toward the cursor
+                span.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px) scale(1.15)`;
+            });
 
+            span.addEventListener('mouseleave', () => {
+                // Snaps back to original position
+                span.style.transform = `translate(0px, 0px) scale(1)`;
+            });
+        });
+    };
+
+    // --- INITIALIZE ALL MODULES ---
     // --- INITIALIZE ALL MODULES ---
     initHeroSlider();
     initStatCounters();
     handleNavigation();
+    initMagneticMarquee(); // <--- Add this line
 });
