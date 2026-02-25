@@ -7,13 +7,16 @@
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/fTSwVnt7/Niviatech-Logo-jpg.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
-  <div class="logo">NIVIA <span>TECH</span></div>
+  <div class="logo">
+    <img src="https://i.postimg.cc/fTSwVnt7/Niviatech-Logo-jpg.jpg" alt="Nivia Tech Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+    NIVIA <span>TECH</span>
+  </div>
   <nav>
     <a href="#">Home</a>
     <a href="#vision">Vision</a>
@@ -103,6 +106,92 @@
         </table>
     </div>
   </div>
+   <div class="cards">
+    <div class="card" data-aos="zoom-in"><span class="icon">📈</span><h3>Marketing</h3><p>Strategic campaigns designed to reach your audience.</p></div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="100"><span class="icon">🔍</span><h3>SEO</h3><p>Advanced Optimization to rank you higher on Google.</p></div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="200"><span class="icon">👥</span><h3>Social</h3><p>High-impact posts to build your brand community.</p></div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="300"><span class="icon">📍</span><h3>Google</h3><p>Optimization to ensure customers find your office first.</p></div>
+  </div>
+  <section class="clients-section">
+  <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">Industries We <span>Empower</span></h2>
+  
+  <div class="marquee">
+    <div class="marquee-content">
+      <span>Handicraft</span>
+      <span>Clinic</span>
+      <span>Dry Fruits</span>
+      <span>Training Center</span>
+      <span>Fancy Dress</span>
+      <span>Finance Companies</span>
+      <span>Mobile Service</span>
+      <span>Trading Companies</span>
+      <span>Coaching Classes</span>
+      <span>Advertising</span>
+      <span>Insurance</span>
+      <span>Interior Design</span>
+      <span>Placement Services</span>
+      <span>Spice Manufacturers</span>
+      <span>Salons</span>
+      <span>Audit & Tax</span>
+      <span>Printing Services</span>
+      <span>Glass & Plywood</span>
+      <span>Advocates</span>
+      <span>Furniture</span>
+      <span>Bio-Products</span>
+      <span>Blood Bank</span>
+      <span>Bricks</span>
+      <span>Cement</span>
+      <span>Cyber Cafe</span>
+      <span>Detective Agency</span>
+      <span>Immigration</span>
+      <span>Pharmaceutical</span>
+      <span>Aluminium Factory</span>
+      <span>Jewellery</span>
+      <span>Civil Contractor</span>
+      <span>Software Company</span>
+      <span>Export-Import</span>
+      <span>Consultancy</span>
+      <span>Welding Shop</span>
+      
+      <span>Handicraft</span>
+      <span>Clinic</span>
+      <span>Dry Fruits</span>
+      <span>Training Center</span>
+      <span>Fancy Dress</span>
+      <span>Finance Companies</span>
+      <span>Mobile Service</span>
+      <span>Trading Companies</span>
+      <span>Coaching Classes</span>
+      <span>Advertising</span>
+      <span>Insurance</span>
+      <span>Interior Design</span>
+      <span>Placement Services</span>
+      <span>Spice Manufacturers</span>
+      <span>Salons</span>
+      <span>Audit & Tax</span>
+      <span>Printing Services</span>
+      <span>Glass & Plywood</span>
+      <span>Advocates</span>
+      <span>Furniture</span>
+      <span>Bio-Products</span>
+      <span>Blood Bank</span>
+      <span>Bricks</span>
+      <span>Cement</span>
+      <span>Cyber Cafe</span>
+      <span>Detective Agency</span>
+      <span>Immigration</span>
+      <span>Pharmaceutical</span>
+      <span>Aluminium Factory</span>
+      <span>Jewellery</span>
+      <span>Civil Contractor</span>
+      <span>Software Company</span>
+      <span>Export-Import</span>
+      <span>Consultancy</span>
+      <span>Welding Shop</span>
+    </div>
+  </div>
+</section>
+
 </section>
 
 <section class="contact" id="contact">
@@ -110,8 +199,8 @@
     <div class="contact-info" data-aos="fade-right">
       <h2 class="section-title">Claim Your Spot on <span>Google Page 1</span></h2>
       <p style="color: var(--text-muted); margin-bottom: 40px;">Redhill Softec: Your Partner in Digital Excellence.</p>
-      <div class="contact-detail-card">📍 <div><h4>Location</h4><p>Vijayanagar, Bangalore - 560104</p></div></div>
-      <div class="contact-detail-card">📞 <div><h4>Phone & WhatsApp</h4><p>+91 94488 47874</p></div></div>
+      <div class="contact-detail-card">📍 <div><h4>Location</h4><p>No.39/4, Third Floor, Service Road, Remco Layout, Vijayanagar, Bengaluru, Karnataka 560104</p></div></div>
+      <div class="contact-detail-card">📞 <div><h4>WhatsApp</h4><p>+91 94488 47874</p></div></div>
       <div class="contact-detail-card">✉️ <div><h4>Email</h4><p>info@redhillsoftec.com</p></div></div>
     </div>
 
@@ -125,24 +214,52 @@
       </div>
 
       <form name="contact" action="/?success" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="modern-form">
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <textarea name="message" rows="4" placeholder="Business goals..." required></textarea>
-        <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
-        <button type="submit" class="btn-submit">Submit Enquiry</button>
-      </form>
+  <input type="hidden" name="form-name" value="contact" />
+  
+  <input type="text" name="name" placeholder="Full Name" required>
+  
+  <input 
+    type="tel" 
+    name="phone" 
+    placeholder="Contact Number" 
+    pattern="[0-9]{10}" 
+    title="Please enter a valid 10-digit phone number (e.g., 9448847874)" 
+    required
+  >
+  
+  <textarea name="message" rows="4" placeholder="How can I help you..." required></textarea>
+  
+  <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
+  
+  <button type="submit" class="btn-submit">Submit Enquiry</button>
+</form>
     </div>
   </div>
 </section>
 
 <div class="map-wrapper" data-aos="fade-up">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.53!3d12.97" loading="lazy"></iframe>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0123456789!2d77.5345!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd000000001%3A0x0!2zVmlqYXlhbmFnYXIsIEJhbmdhbG9yZSwgS2FybmF0YWthIDU2MDEwNA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 </div>
 
 <footer>
-  <div class="logo">REDHILL <span>SOFTEC</span></div>
-  <div class="footer-bottom">© 2026 REDHILL SOFTEC | ALL RIGHTS RESERVED.</div>
+  <div class="logo">
+    <img src="https://i.postimg.cc/fTSwVnt7/Niviatech-Logo-jpg.jpg" alt="Nivia Tech Logo" style="height: 35px; width: auto; vertical-align: middle; margin-right: 10px; object-fit: contain;">
+    NIVIA <span>TECH</span>
+  </div>
+  
+  <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px; letter-spacing: 1px;">
+    Crafted by <span style="color: var(--accent); font-weight: 600;">REDHILL SOFTEC</span>
+  </div>
+
+  <div class="footer-bottom">© 2026 NIVIA TECH | ALL RIGHTS RESERVED.</div>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
