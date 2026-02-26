@@ -190,22 +190,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Scroll Logic: Navbar Shrink + Active Link Tracking
-        window.addEventListener('scroll', () => {
-            const scrollY = window.pageYOffset;
-            const navbar = document.querySelector('.navbar');
-            
-            // Navbar Glassmorphism & Shrink Effect
-            if (scrollY > 80) {
-                navbar.style.background = "rgba(0, 0, 0, 0.95)";
-                navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,0.7)";
-                navbar.style.height = "70px";
-            } else {
-                navbar.style.background = "rgba(0, 0, 0, 0.85)";
-                navbar.style.boxShadow = "none";
-                navbar.style.height = "85px";
-            }
+        // Updated Scroll Logic: Keeps the menu toggle stable
+window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    const navbar = document.querySelector('.navbar');
+    
+    if (scrollY > 50) {
+        navbar.style.background = "rgba(0, 0, 0, 0.95)";
+        navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,0.7)";
+        // We keep the height consistent to avoid moving the toggle button
+        navbar.style.height = "70px"; 
+    } else {
+        navbar.style.background = "rgba(0, 0, 0, 0.85)";
+        navbar.style.boxShadow = "none";
+        navbar.style.height = "70px"; // Set this to the same height as mobile height
+    }
+    // ... rest of your scrollspy code ...
 
             // Scrollspy: Highlight correct menu item as you scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar nav a');
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
                 const sectionTop = current.offsetTop - 120;
