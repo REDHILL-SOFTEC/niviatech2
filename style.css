@@ -118,7 +118,7 @@ section {
 
 /* --- HERO SECTION --- */
 .hero {
-  height: 100vh;
+  height: 90vh;
   padding: 0;
   overflow: hidden;
   background: #000;
@@ -129,6 +129,8 @@ section {
   inset: 0;
   background-size: cover;
   background-position: center;
+  filter: contrast(1.1) brightness(1.1) saturate(1.1);
+  image-rendering: -webkit-optimize-contrast; /* Sharper rendering in Chrome/Safari */
   opacity: 0;
   transform: scale(1.1);
   transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
@@ -378,31 +380,30 @@ section {
   box-shadow: 0 15px 30px var(--accent-glow);
 }
 
-/* --- MAP & FOOTER --- */
-.map-wrapper { 
-  line-height: 0; 
-  margin-top: 50px; 
-  perspective: 1000px; /* Adds a bit of depth */
-}
-
+/* 1. Base style for ALL devices (Clean & Visible by default) */
 .map-wrapper iframe { 
   width: 100%; 
   height: 450px; 
   border: 0; 
-  /* Tech-style Dark Map */
-  filter: grayscale(1) invert(0.92) contrast(1.2); 
-  border-radius: 30px; /* Makes it match your cards and buttons */
+  border-radius: 30px;
   border: 1px solid var(--glass-border);
+  filter: none; /* No filter for mobile by default */
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* The map "wakes up" when the user interacts with it */
-.map-wrapper:hover iframe {
-  filter: grayscale(0) invert(0) contrast(1);
-  border-color: var(--accent);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
+/* 2. ONLY apply the dark filter if the device has a mouse (Laptop/Desktop) */
+@media (hover: hover) {
+  .map-wrapper iframe {
+    filter: grayscale(1) invert(0.92) contrast(1.2);
+  }
 
+  /* The "wake up" effect only happens on hover-capable devices */
+  .map-wrapper:hover iframe {
+    filter: grayscale(0) invert(0) contrast(1);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+}
 footer {
   padding: 80px 8% 40px;
   text-align: center;
@@ -507,7 +508,7 @@ footer {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6%;
+    padding: 0 16%;
   }
 
   /* CHANGE 2: Force the button to show immediately */
@@ -520,7 +521,9 @@ footer {
 
   .navbar nav a {
     color: var(--accent) !important; /* Forces the text to use your Gold color */
-    font-size: 1.2rem;               /* Makes the text slightly larger for easier tapping */
+    text-decoration: none !important;
+    font-size: 1.2rem;
+    font-weight: 500;               /* Makes the text slightly larger for easier tapping */
     margin-bottom: 20px;            /* Adds space between the items */
     opacity: 1;                     /* Ensures it is fully bright */
   }
