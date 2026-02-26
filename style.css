@@ -45,6 +45,18 @@ body {
 section {
   position: relative;
   width: 100%;
+  padding: 60px 6%; /* Adds 6% space on left and right for mobile */
+}
+/* This targets the 'Why Our Next-Gen' section specifically */
+#tech {
+    padding-top: 20px !important; /* Reduces the top space from 60px to 20px */
+}
+
+/* If you want it even higher on desktop as well */
+@media (min-width: 1024px) {
+    #tech {
+        padding-top: 30px !important;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -131,7 +143,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 6%;
+  padding: 0 10%;
 }
 
 .overlay h1 {
@@ -186,6 +198,14 @@ section {
   margin-top: 30px;
 }
 
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr; /* Stacks the stats vertically on small phones */
+    text-align: center;
+    gap: 30px;
+  }
+}
+
 .stat-item .stat-number {
   display: block;
   font-size: 2rem;
@@ -198,7 +218,7 @@ section {
 /* Showcase Container */
 .inner-showcase {
   background: var(--bg-deep);
-  padding: 40px 30px;
+  padding: 30px 20px;
   border-radius: 30px;
   border: 1px solid var(--glass-border);
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
@@ -481,19 +501,37 @@ footer {
 }
 /* --- MOBILE MENU ANIMATION --- */
 @media (max-width: 1024px) {
+  /* CHANGE 1: Force the navbar height so the button doesn't move */
+  .navbar {
+    height: 70px !important; 
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+  }
+
+  /* CHANGE 2: Force the button to show immediately */
   .menu-toggle {
-    display: flex; /* This makes the 3 bars appear on mobile */
+    display: flex !important; 
     flex-direction: column;
     gap: 5px;
-    cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
+  }
+
+  .navbar nav a {
+    color: var(--accent) !important; /* Forces the text to use your Gold color */
+    font-size: 1.2rem;               /* Makes the text slightly larger for easier tapping */
+    margin-bottom: 20px;            /* Adds space between the items */
+    opacity: 1;                     /* Ensures it is fully bright */
   }
 
   .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--text-main);
+    background-color: #ffffff !important;
     transition: 0.3s;
+    border-radius: 2px;
+    display: block !important;
   }
 
   .navbar nav {
@@ -513,4 +551,16 @@ footer {
   .navbar nav.active {
     right: 0;
   }
+  /* --- FIX FOR THANK YOU MESSAGE ON MOBILE --- */
+
+/* Stops the browser 120px before the section so the navbar doesn't cover the message */
+#contact {
+    scroll-margin-top: 120px !important;
+}
+
+/* Adds a small gap above the thank-you box for better visibility */
+#thank-you-box {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
 }
