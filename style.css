@@ -69,7 +69,7 @@ section {
   top: 0;
   width: 100%;
   height: var(--nav-height-mob);
-  padding: 0 6%;
+  padding: 0 4%;
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -87,7 +87,7 @@ section {
 .navbar nav { display: none; } 
 
 @media (min-width: 1024px) {
-  .navbar { height: var(--nav-height-desk); padding: 0 10%; }
+  .navbar { height: var(--nav-height-desk); padding: 0 5%; }
   .navbar nav { display: flex; gap: 40px; }
   .navbar nav a {
     text-decoration: none;
@@ -118,7 +118,8 @@ section {
 
 /* --- HERO SECTION --- */
 .hero {
-  height: 90vh;
+  height: 75vh !important;
+  min-height: 500px;
   padding: 0;
   overflow: hidden;
   background: #000;
@@ -508,7 +509,7 @@ footer {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16%;
+    padding: 0 5%;
   }
 
   /* CHANGE 2: Force the button to show immediately */
@@ -517,6 +518,7 @@ footer {
     flex-direction: column;
     gap: 5px;
     z-index: 1002;
+    margin-right: 55px;
   }
 
   .navbar nav a {
@@ -566,4 +568,43 @@ footer {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
 }
+}
+/* --- MOBILE-ONLY GAP REPAIR --- */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Remove the 'cushion' at the bottom of the Hero */
+  .hero {
+    margin-bottom: 0 !important;
+    height: 65vh !important; /* Adjusts hero height for phone screens */
+  }
+
+  /* 2. Fix the "Digital Presence" text container */
+  .overlay p {
+    font-size: 1.0rem !important;
+    line-height: 1.3 !important;
+    margin-top: 5px !important;
+    max-width: 100% !important;
+  }
+}
+/* --- MOBILE GAP REPAIR --- */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Shrink the overlay height so it doesn't push the next section down */
+  .hero {
+    height: auto !important;
+    min-height: 360px !important; /* Adjust this number to fit your text */
+  }
+
+  .overlay {
+    height: auto !important;
+    padding-top: 100px !important; /* Space for the navbar */
+    padding-bottom: 40px !important; /* Controls the gap at the bottom */
+    justify-content: flex-start !important; /* Starts text from top instead of center */
+  }
+
+  /* 2. Remove the top cushion from the 'AI is Ruling' section */
+  #vision {
+    padding-top: 20px !important;
+    margin-top: 0 !important;
+  }
 }
