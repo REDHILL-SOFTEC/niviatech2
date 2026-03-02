@@ -196,14 +196,9 @@ window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     
     if (scrollY > 50) {
-        navbar.style.background = "rgba(0, 0, 0, 0.95)";
-        navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,0.7)";
-        // We keep the height consistent to avoid moving the toggle button
-        navbar.style.height = "70px"; 
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = "rgba(0, 0, 0, 0.85)";
-        navbar.style.boxShadow = "none";
-        navbar.style.height = "70px"; // Set this to the same height as mobile height
+        navbar.classList.remove('scrolled');
     }
     // ... rest of your scrollspy code ...
 
